@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystic Shell Shuffle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- Welcome Screen -->
+<div id="welcome-screen" class="menu-screen">
+    <h1 class="game-title">MYSTIC SHELL SHUFFLE</h1>
+    <button id="playBtn" class="menu-button">PLAY THE GAME</button>
+</div>
+
+<!-- Language Selection -->
+<div id="language-screen" class="menu-screen hidden">
+    <h2 class="menu-title">SELECT LANGUAGE / 選擇語言</h2>
+    <div class="button-group">
+        <button class="menu-button" data-lang="en">ENGLISH</button>
+        <button class="menu-button" data-lang="zh">中文 (繁體)</button>
+    </div>
+</div>
+
+<!-- Player Selection -->
+<div id="player-screen" class="menu-screen hidden">
+    <h2 class="menu-title">SELECT NUMBER OF PLAYERS</h2>
+    <div class="button-group">
+        <button class="menu-button" data-players="1">SOLO</button>
+        <button class="menu-button" data-players="2">2 PLAYERS</button>
+        <button class="menu-button" data-players="3">3 PLAYERS</button>
+        <button class="menu-button" data-players="4">4 PLAYERS</button>
+    </div>
+</div>
+
+<!-- Difficulty Selection -->
+<div id="difficulty-screen" class="menu-screen hidden">
+    <h2 class="menu-title">SELECT DIFFICULTY</h2>
+    <div class="button-group">
+        <button class="menu-button" data-difficulty="easy">EASY</button>
+        <button class="menu-button" data-difficulty="medium">MEDIUM</button>
+        <button class="menu-button" data-difficulty="hard">HARD</button>
+        <button class="menu-button" data-difficulty="extreme">EXTREME</button>
+        <button class="menu-button" data-difficulty="adaptive">ADAPTIVE MODE</button>
+    </div>
+</div>
+
+<!-- Game Screen -->
+<div id="game-screen" class="hidden">
+    <div id="control-panel">
+        <button id="pauseBtn" class="control-btn" title="Pause/Resume">⏸</button>
+        <button id="replayBtn" class="control-btn" title="Replay Round">🔄</button>
+        <button id="homeBtn" class="control-btn" title="Home">🏠</button>
+    </div>
+    
+    <h1>MYSTIC SHELL SHUFFLE</h1>
+    
+    <div id="game-info">
+        <span id="current-player">Player 1</span>
+        <span id="game-settings"></span>
+    </div>
+
+    <div id="game-area"></div>
+
+    <div id="controls">
+        <button id="startBtn">START ROUND</button>
+        <div id="status"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
